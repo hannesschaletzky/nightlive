@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingPageViewController" customModule="nightlive" customModuleProvider="target">
+            <connections>
+                <outlet property="searchBar" destination="qtP-4e-H5t" id="Z3u-dw-6KM"/>
+                <outlet property="tableView" destination="BMM-g1-tz3" id="00d-da-ytT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search..." showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-4e-H5t">
+                    <rect key="frame" x="0.0" y="10" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4al-3j-W3y"/>
+                    </constraints>
+                    <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-g1-tz3">
+                    <rect key="frame" x="0.0" y="49" width="375" height="301"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ENv-a8-WiC"/>
+                        <outlet property="delegate" destination="-1" id="jMf-9O-7oz"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BMM-g1-tz3" secondAttribute="bottom" id="0h6-3q-VTT"/>
+                <constraint firstItem="qtP-4e-H5t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="27Q-n6-YSq"/>
+                <constraint firstAttribute="trailing" secondItem="qtP-4e-H5t" secondAttribute="trailing" id="SKj-Zm-WGF"/>
+                <constraint firstItem="BMM-g1-tz3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sz0-SV-4fx"/>
+                <constraint firstItem="BMM-g1-tz3" firstAttribute="top" secondItem="qtP-4e-H5t" secondAttribute="bottom" constant="-1" id="avZ-Cq-pGK"/>
+                <constraint firstAttribute="trailing" secondItem="BMM-g1-tz3" secondAttribute="trailing" id="ayD-lW-Ehs"/>
+                <constraint firstItem="qtP-4e-H5t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lJ0-at-nqE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="55"/>
+        </view>
+    </objects>
+</document>

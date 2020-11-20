@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingPageViewController" customModule="nightlive" customModuleProvider="target">
+            <connections>
+                <outlet property="filterMap_happyHourSegCon" destination="SQX-Sr-gnr" id="VMT-EW-BNH"/>
+                <outlet property="filterMap_locationTypeSegCon" destination="xlv-ew-LIj" id="QEI-qN-O2n"/>
+                <outlet property="filterMap_openSegCon" destination="lV0-3e-lAT" id="NbP-I3-RS3"/>
+                <outlet property="filterMap_radiusLabel" destination="WPT-xn-boC" id="lp4-Mv-LIc"/>
+                <outlet property="filterMap_radiusSlider" destination="qW9-eS-SD2" id="m8n-Es-b8y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6gF-Yn-irN">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auswahl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-y4-Biv">
+                    <rect key="frame" x="16" y="10" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="od7-gD-4E4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-h7-aDf">
+                    <rect key="frame" x="16" y="82" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ASH-RZ-4mL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-ew-LIj">
+                    <rect key="frame" x="16" y="39" width="343" height="29"/>
+                    <segments>
+                        <segment title="Clubs"/>
+                        <segment title="Bars"/>
+                        <segment title="Alle"/>
+                    </segments>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="mapFilter_LocationTypePressed:" destination="-1" eventType="valueChanged" id="36R-ga-IIs"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-3e-lAT">
+                    <rect key="frame" x="16" y="111" width="343" height="29"/>
+                    <segments>
+                        <segment title="Heute"/>
+                        <segment title="Jetzt"/>
+                        <segment title="Kein Filter"/>
+                    </segments>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="mapFilter_OpenPressed:" destination="-1" eventType="valueChanged" id="T79-Dm-gTU"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CE-uD-GR7">
+                    <rect key="frame" x="16" y="154" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="LSK-HZ-bBV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Umkreis:  kein Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPT-xn-boC">
+                    <rect key="frame" x="16" y="226" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="yOP-59-yEP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="SQX-Sr-gnr">
+                    <rect key="frame" x="16" y="183" width="343" height="29"/>
+                    <segments>
+                        <segment title="Heute"/>
+                        <segment title="Jetzt"/>
+                        <segment title="Kein Filter"/>
+                    </segments>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="mapFilter_HappyHourPressed:" destination="-1" eventType="valueChanged" id="Zra-sh-eUE"/>
+                    </connections>
+                </segmentedControl>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-eS-SD2">
+                    <rect key="frame" x="14" y="255" width="347" height="31"/>
+                    <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="radiusSliderTouchUp:" destination="-1" eventType="touchUpOutside" id="IdE-9z-KpQ"/>
+                        <action selector="radiusSliderTouchUp:" destination="-1" eventType="touchUpInside" id="mzE-wb-hb1"/>
+                        <action selector="radiusSliderValueChanged:" destination="-1" eventType="valueChanged" id="A6Z-pN-61u"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SQX-Sr-gnr" firstAttribute="leading" secondItem="1CE-uD-GR7" secondAttribute="leading" id="029-TL-v83"/>
+                <constraint firstItem="SQX-Sr-gnr" firstAttribute="trailing" secondItem="1CE-uD-GR7" secondAttribute="trailing" id="3JE-I2-MoD"/>
+                <constraint firstItem="xlv-ew-LIj" firstAttribute="trailing" secondItem="Ifo-y4-Biv" secondAttribute="trailing" id="3j9-8Q-YkH"/>
+                <constraint firstItem="WPT-xn-boC" firstAttribute="top" secondItem="SQX-Sr-gnr" secondAttribute="bottom" constant="15" id="6fB-NJ-oVS"/>
+                <constraint firstAttribute="trailing" secondItem="Ifo-y4-Biv" secondAttribute="trailing" constant="16" id="7p2-0Y-gvK"/>
+                <constraint firstItem="1CE-uD-GR7" firstAttribute="leading" secondItem="lV0-3e-lAT" secondAttribute="leading" id="9AD-LM-WVF"/>
+                <constraint firstItem="Ifo-y4-Biv" firstAttribute="leading" secondItem="6gF-Yn-irN" secondAttribute="leading" constant="16" id="9nq-1S-oUZ"/>
+                <constraint firstItem="qW9-eS-SD2" firstAttribute="leading" secondItem="WPT-xn-boC" secondAttribute="leading" id="Bmw-Wz-T6S"/>
+                <constraint firstItem="xTX-h7-aDf" firstAttribute="top" secondItem="xlv-ew-LIj" secondAttribute="bottom" constant="15" id="Dyj-Fp-rkd"/>
+                <constraint firstItem="Ifo-y4-Biv" firstAttribute="top" secondItem="6gF-Yn-irN" secondAttribute="top" constant="10" id="EVk-Bf-d3d"/>
+                <constraint firstItem="1CE-uD-GR7" firstAttribute="trailing" secondItem="lV0-3e-lAT" secondAttribute="trailing" id="Eat-Ye-O8H"/>
+                <constraint firstItem="xTX-h7-aDf" firstAttribute="leading" secondItem="xlv-ew-LIj" secondAttribute="leading" id="GDI-zN-oYu"/>
+                <constraint firstItem="lV0-3e-lAT" firstAttribute="trailing" secondItem="xTX-h7-aDf" secondAttribute="trailing" id="GKI-yZ-9o0"/>
+                <constraint firstItem="lV0-3e-lAT" firstAttribute="top" secondItem="xTX-h7-aDf" secondAttribute="bottom" constant="8" id="SPX-OQ-2nx"/>
+                <constraint firstItem="xlv-ew-LIj" firstAttribute="top" secondItem="Ifo-y4-Biv" secondAttribute="bottom" constant="8" id="UiW-tD-f2K"/>
+                <constraint firstItem="WPT-xn-boC" firstAttribute="trailing" secondItem="SQX-Sr-gnr" secondAttribute="trailing" id="VKz-8A-d7m"/>
+                <constraint firstItem="xTX-h7-aDf" firstAttribute="trailing" secondItem="xlv-ew-LIj" secondAttribute="trailing" id="W24-B1-HNP"/>
+                <constraint firstItem="qW9-eS-SD2" firstAttribute="trailing" secondItem="WPT-xn-boC" secondAttribute="trailing" id="fJs-ON-P2x"/>
+                <constraint firstItem="qW9-eS-SD2" firstAttribute="top" secondItem="WPT-xn-boC" secondAttribute="bottom" constant="8" id="ihu-6N-gDK"/>
+                <constraint firstItem="1CE-uD-GR7" firstAttribute="top" secondItem="lV0-3e-lAT" secondAttribute="bottom" constant="15" id="jAo-BE-wS2"/>
+                <constraint firstItem="SQX-Sr-gnr" firstAttribute="top" secondItem="1CE-uD-GR7" secondAttribute="bottom" constant="8" id="scK-Wf-5Iq"/>
+                <constraint firstItem="WPT-xn-boC" firstAttribute="leading" secondItem="SQX-Sr-gnr" secondAttribute="leading" id="tU3-Mp-sWR"/>
+                <constraint firstItem="xlv-ew-LIj" firstAttribute="leading" secondItem="Ifo-y4-Biv" secondAttribute="leading" id="vdT-75-OaW"/>
+                <constraint firstItem="lV0-3e-lAT" firstAttribute="leading" secondItem="xTX-h7-aDf" secondAttribute="leading" id="zLP-SS-Dhg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </view>
+    </objects>
+</document>
