@@ -10,19 +10,19 @@ import Foundation
 import Parse
 
 //MARK: - Global Variables
-public let parseServerURL = "https://parseapi.back4app.com"
-public let parseServerAppID = "ENPEorSkCLPcSaLuczm97S6GKDMZup40wDoIzo8F"
-public let parseServerClientKey = "VQcvIlLzjPwgyEpHQWJdhU2jiIrmx1ctGTKQWq1v"
-public let parseServerRestKey = "LV5sw0O7KIcnsUFdbnIXGgqH8wnU2HQLCo4Zlh7s"
-public let parseServerMasterKey = "8PXYV95J1mdcFXydoDGfIasmBY4eDYBsDzy5aiDP"
+public let parseServerURL = ""
+public let parseServerAppID = ""
+public let parseServerClientKey = ""
+public let parseServerRestKey = ""
+public let parseServerMasterKey = ""
 
 //Facebook Credentials
-let facebookAppSecret = "d316d17077c71d4e6f4f7227f9fe0b52"
-let facebookAppID = "1126230424104158"
+let facebookAppSecret = ""
+let facebookAppID = ""
 
 //Google Credentials
-let googleAPIKey = "AIzaSyAhueCi1MdgZCj3661155Jf7fW3vB2-PAQ"
-let googleWebServiesAPIKey = "AIzaSyCSFKE-8u9pXCHzwkHBDg2cynzjrS-UE14"
+let googleAPIKey = ""
+let googleWebServiesAPIKey = ""
 
 //Date over the whole App
 var dateToWorkWith = Date() {
